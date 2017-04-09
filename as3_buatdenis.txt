@@ -1,0 +1,120 @@
+var a:Number = 67;
+trace("angka "+a+" merupakan nilai dari a");
+var b:String = "coba";
+trace(b);
+var c:Array=["a",1,"b",2,[3,4,5]];
+trace(c[4][2]);
+var d:Object={n:"c",p:6,q:7};
+trace(d.n);
+var e:Array=[
+{r:"d",s:8,t:9},{u:"e",v:10,w:11},{f:"g",
+h:12,i:13}];
+function j():void{
+	trace("fungsi tanpa parameter");
+}
+trace("test");
+trace(a);
+rotate.addEventListener("click",function(){
+	box.rotation += 25;
+	//box.x += 5;
+	box.x = Math.random()*700;
+	//box.y += 5;
+	box.y = Math.random()*400;
+	box.alpha -= 0.05;
+	box.scaleX += 0.1;
+	box.scaleY += 0.1;})
+randbtn.addEventListener(
+	MouseEvent.CLICK, function(e){
+	rand.text = ""+Math.random()*101;}
+	//convert to string supaya bisa diprint
+);
+randbtn.addEventListener(
+	MouseEvent.MOUSE_UP, function(e){
+	trace("button released");}
+);
+randbtn.addEventListener(
+	MouseEvent.MOUSE_DOWN, function(e){
+	trace("button pressed");}
+);
+randbtn.addEventListener(
+	MouseEvent.MOUSE_OVER, function(e){
+	trace("hovering on button");}
+);
+stage.addEventListener(
+	KeyboardEvent.KEY_DOWN, function(e){
+		trace("keycode "+e.keyCode+" pressed");
+		trace("ASCII "+e.charCode+" pressed");}
+);
+stage.addEventListener(
+	KeyboardEvent.KEY_UP, function(e){
+		trace("keycode "+e.keyCode+" released");
+		trace("ASCII "+e.charCode+" released");}
+);
+stop();//menghentikan loop keyframe 1
+nextbtn.addEventListener(
+	MouseEvent.CLICK, function(e){
+		gotoAndStop(2);}
+		//
+);
+stop();
+function playAnimation
+(event:MouseEvent):void { 
+    play(); } 
+plaay.addEventListener
+(MouseEvent.CLICK, 
+ playAnimation);
+function 
+ pauseAnimation(event:
+	MouseEvent):void { 
+    stop(); } 
+pausee.addEventListener
+(MouseEvent.CLICK, 
+ pauseAnimation);
+function stopAnimation
+(event:MouseEvent):void { 
+    gotoAndStop(1); } 
+stoop.addEventListener
+(MouseEvent.CLICK, 
+ stopAnimation);
+ function ffw
+ (event:MouseEvent)
+ :void { 
+    gotoAndPlay
+	(currentFrame+20); } 
+ff.addEventListener
+(MouseEvent.MOUSE_DOWN,
+ ffw);
+ function rrw
+ (event:MouseEvent)
+ :void { 
+    gotoAndPlay
+	(currentFrame-20); } 
+rw.addEventListener
+(MouseEvent.CLICK,
+ rrw);
+ function gotoframe
+ (event:MouseEvent)
+ :int { 
+ var frameTarget:int
+= int(inputField.text);
+ if(frameTarget<=
+	totalFrames){
+    gotoAndPlay
+	(frameTarget);}
+	return frameTarget;
+	} 
+go.addEventListener
+(MouseEvent.CLICK,
+ gotoframe);
+left.addEventListener("click",function(){
+	orang.play();
+	orang.x -= 20;})
+right.addEventListener("click",function(){
+	orang.play();
+	orang.x += 20;})
+button.addEventListener("click",function(){
+	var a = new ball();
+	a.x = Math.random()*400;
+	a.y = Math.random()*300;
+	addChild(a);
+	});
