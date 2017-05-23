@@ -1,0 +1,286 @@
+tty.. -> console (pure machine)
+pts/.. -> remote command line
+
+nano/vi -> untuk scripting -> plain text tidak ada styling
+nano mudah dipakai, sudah ada keterangan perintah-perintah
+vi murni text editor
+vim -> improved vi -> indentation, pewarnaan, styling beragam
+
+#! -> shebang -> penanda interpreter -> sesuaikan direktori library scripting
+mempermudah memproses bahasa scripting
+sh -> bash -> sama
+
+kelebihan scripting
+leluasa menggunakan variabel
+hilang/inactive ketika sudah dipanggil/dieksekusi
+
+mengubah/inisialisasi tanpa dolar (cwd = `pwd`)
+memanggil/eksekusi $cwd
+
+setiap argumen dijadikan variabel secara otomatis
+abc xyz
+$1  $2
+$0 -> nama file
+
+#!/bin/bash
+echo "nama file: $0"
+echo "argumen pertama: $1"
+
+$? exit code -> berhasil return 0 keluar/eksekusi dengan lancar tanpa error
+gagal 1
+
+CWD=`pwd` -> output dari perintah pwd disimpan pada variabel
+
+rc.local -> menyimpan startup script -> /etc/rc.local
+
+perintah test beroutput true/false
+
+A=10
+if test $A -lt 100; then echo "below 100"; else echo "above 100"
+		    perintah kondisi true	false
+if [ $A -gt 100 ]; ...; ...
+parameter if -> -ge greater and equal than
+		-le less
+		-ne not equal
+
+case -> ada kemungkinan jawaban -> statement bisa lebih dari satu
+kondisi diakhiri ;; *) default condition
+for FILE in *; do //* mengarah pada file pada direktori dimana script berada
+  ls –l $FILE //-l dianggap comment mengakali \-l
+done
+
+cat untuk liat isi FILE!! (plain text only!)
+linux dapat digunakan untuk komputer rakitan -> spesifikasi umum (compatible)
+bisa multi-processor -> Xeon (multi-core)
+jenis processor x86 (32-bit) x86_64 (64-bit) Intel based
+yang lainnya SPARC, transmeta crusoe -> jarang dipakai, kurang support, pemakai minim
+crusoe tidak se-powerful Intel
+32-bit maksimal 4GB RAM -> alokasi mapping (optimalisasi, pembacaan instruksi)
+virtualization -> VT-x (fungsi" optimal, selain itu lebih lambat)
+command cek virtualisasi: arch, lspcu, cat /proc/cpuinfo
+intel core i3-2300 -> digit pertama generasi keberapa dari core
+flags berisi perintah/fitur dari processor
+komunikasi hardware via motherboard/bus
+BIOS menyiapkan hardware yang akan dipakai/disiapkan
+SMBIOS -> untuk komunikasi antar hardware
+sudo dmidecode -> informasi detail BIOS -> versi, hardware yang tercolok
+handle number -> untuk cek hardware yang tidak terdeteksi (tidak berlaku pada
+onboard)
+peripheral devices -> device yang tercolok/terpasang tidak langsung pada motherboard:
+lspci -> slot PCI pada motherboard -> SATA -> cek yang tertancap -> /dev
+lsusb -> /dev/usbmon -> bus 000 device 000
+bus: terminal/jalur usb
+pci -> banyak kaki, setiap kaki data, komunikasi berdasarkan pin
+usb -> serial, tidak via pin
+HAL -> hardware abstraction layer -> mengawasi hardware yang beroperasi
+sudo lshal
+disk devices partitioning types:
+master boot record (MBR) -> informasi menyimpan letak kernel, jumlah partisi, volume disk yang
+dipakai/dipartisi, mengarahkan hardware untuk membaca OS yang sesuai
+fdisk
+GUID partitioning table (GPT) -> file allocation table -> mapping file, defragment
+drive, dual boot -> diakses via high-level program (MBR read only)
+gdisk -> single OS (detail informasi),cgdisk,sgdisk
+linux: device name disimpan pada direktori /dev
+/dev/hda -> IDE /dev/sda -> SATA /dev/hdb -> 2nd IDE
+partisi 1-3 -> primary lebih extended
+semua yang ber-controller SATA dianggap SATA -> SATA
+satu hard disk banyak partisi bisa beda filesystem nya
+konektor video: VGA (onboard, auto-detect), DVI (resolusi maks 2K -> 1440p)
+HDMI/DVI untuk resoulsi tinggi/multi-monitor
+configuration file: /etc/X11/xorg.conf -> untuk OS ber GUI (text-based tidak perlu)
+mouse pointer (seberapa cepat gerak, besar pointer) diatur pada setting VGA
+package management untuk install/uninstall package/program
+beberapa menghapus config file beberapa tidak
+kesulitan membuat distro -> dependencies:library/komponen yang saling terkait (dipakai pada
+beberapa program sekaligus sehingga biasanya sulit untuk menghapus program)
+package management -> Debian, RPM, manual (extract dan manage .tar)
+Debian -> apt-get, aptitude
+sudo apt-get update; apt-get upgrade; -> sudo yum update
+sudo apt-get dist-upgrade -> untuk update distro
+synaptic, software-center -> seperti control panel pada Windows (GUI)
+sudo apt-cache search keyword -> cari package
+sudo apt-get --purge remove package -> clean uninstall (dengan menghapus config file juga)
+dependencies: library tidak terpakai tidak terhapus
+sudo apt-get autoremove -> hapus library tidak terpakai
+dpkg -l -> list semua program yang ter-install
+dpkg -L [nama package] -> list file" yang ada pada package
+dpkg -s -> informasi terkait package (changelog, pembuat package, versi, deskripsi, dependencies)
+dpkg -S [] -> mengetahui sebuah file dari package mana (asal package)
+redhat gui -> yumex, gpk-application
+rpm -qa -> list semua program yang ter-install (redhat)
+rpm -ql [] -> list file" yang ada pada package (redhat)
+rpm -qi [] -> informasi terkait package (redhat)
+(changelog, pembuat package, versi, deskripsi, dependencies)
+process pada linux -> /proc/[process id] yang berhak akses yang punya proses
+semua proses dimulai dari init (/sbin/init) ber-pid 1 -> hanya root yang dapat
+semua proses dibawah init -> inisialisasi awal
+/proc/sys/kernel/pid_max -> cek proses maksimal yang dapat dieksekusi
+mengganti dengan input redirection -> sudo echo [angka] > [dir proc]
+untuk masalah performa -> /etc/sysctl.conf (simpan permanen)
+kernel.pid_max = 1000 -> restart system
+jika penuh tidak dapat eksekusi proses baru
+init (systemd) -> parent process
+pstree cek hierarki proses (bentuk tree) pid beda antara child dan parent
+tergantung kesediaan pid (random)
+ps aux atau ps -ef
+top cek proses dengan interval 1 detik
+keluar dari top tekan q
+perintah uptime:
+load average: [1menit lalu] [5menit lalu] [15menit lalu]
+angka 0 koma -> pemakaian ringan/kecil
+angka 1 koma -> single core 100% dual core 1/2 quad core 1/4
+penyebab load tinggi -> proses, read/write ke OS (sulit terdeteksi)
+%cpu(s): 0.0 wa -> write access (baca/tulis dari/ke hard disk)
+syslogd -> service untuk pencatatan log file setiap program -> /var/log
+secara default logfiles disimpan pada messages/syslog /var/log/messages(atau syslog tergantung distro)
+cron -> scheduler -> /var/log/cron
+maillog -> email keluar masuk (sender recipient IP address)
+log file rotation -> supaya hard disk tidak penuh (biasanya hanya seminggu disimpan, bisa diatur manual)
+message-20170411 -> log hasil rotasi -> diatur pada logrotate.d
+logrotate.conf -> /etc
+daily
+rotate 5
+satuan mengikuti daily/weekly/monthly
+/var/log/btmp(wtmp) -> last login -> binary
+sisanya plain text
+dmesg -> simpan segala yang terjadi pada kernel (setelah restart) -> /var/log/dmesg
+host -> pemilik IP address, device yang dapat dihubungi via IP
+satu device dapat memiliki beberapa IP address
+unmanagable switch -> tidak dapat diberi IP
+managable switch -> host -> vLAN, routing -> bisa diberi IP
+vLAN -> memisah network -> routing untuk masing-masing vLAN
+vLAN layer 2 routing layer 3
+network -> kumpulan dua ato lebih hosts yang saling berkomunikasi
+Internet -> terhubung ke seluruh dunia
+internet -> tidak public -> ruang lingkup lebih kecil
+sudo ethtool [device] -> cek detail interface network -> physical layer
+ifconfig -> layer 2 (network)
+device interrupt -> semua device yang terhubung (punya id)
+loopback address -> localhost (::1/128 prefix)
+maximum transmission unit (layer 2)-> mtu 1500 (full, murni IP tidak dibungkus)
+data dibungkus sampai link layer -> cara komunikasi (harus tau MAC address)
+service -> layer transport, application
+router -> menjembatani network yang lain
+packet -> payload data -> pemecahan data sesuai ukuran maksimalnya
+netmask -> membatasi jumlah IP yang ada pada suatu jaringan
+hostname -> DNS atau hostfile	/etc/hosts/
+kadang lebih membaca hostfile daripada DNS
+/etc/host.conf -> multi on -> membaca dari DNS dan hostfile
+order bind,hosts -> tanya DNS dulu baru hostfile
+DHCP -> supaya setiap PC dapat IP address
+dhclient -> meminta IP address yang belum dapat/expire
+mencari MAC address yang IP address nya tidak ada/expire -> tabel DHCP server
+ethernet -> frame -> hubungkan antar network -> layer 1 dan 2 MAC
+TCP/IP layer 3	kenapa IPv4 masih dipakai? private IP dan NAT (masquarade)
+IPv6 supaya tidak ada private IP -> semua public siapapun bisa akses
+loopback address untuk service yang dijalankan pada PC itu sendiri
+aplikasi terhubung ke aplikasi yang sama dalam satu layer
+wireless -> pengaturan SSID, security (WPA key)
+eno1 (RedHat -> CentOS) eth1 (Debian)
+setting jaringan -> Debian /etc/network/interfaces RedHat /etc/sysconfig/network-scripts/ifcfg-eno[n]
+MAC address dapat diganti secara software (manual)
+/etc/resolv.conf -> setting DNS server
+ifconfig dengan root access -> ganti IP, MAC, subnet
+route -> routing table -> non-router hanya berisi default gateway
+IP destination general lewat IP default getaway vs spesifik, beda gateway
+larinya ke spesifik/yang lebih kecil
+route flag U up (bisa dihubungi) H host G gateway
+ping protokol ICMP untuk cek keberadaan suatu IP
+tidak berlaku untuk private IP yang tidak di NAT (hanya yang ada dalam network tersebut)
+traceroute -> lewat gateway setelah itu ke website/destination IP
+dig -> query DNS	host -t A [alamat web] -> cari IP address
+host -t AAAA [alamat web] -> IPv6 dari website
+host -t MX [alamat web] -> angka terkecil tujuan akhir
+angka yang lebih besar untuk relay backup -> apabila tujuan akhir down (penuh)
+apabila semua penuh dimasukkan dalam antrian lalu dicoba dikirim lagi
+host -t TXT [alamat web] -> informasi teks yang dapat disisipkan
+biasanya dipakai untuk spam filter
+host -t NS [alamat web] -> letak/lokasi/alamat server
+dual stack -> server yang memiliki IPv6 dan IPv4 v6 diprioritaskan
+untuk pengalihan, memindahkan perlahan-lahan ke v6
+ukuran setiap packet fix -> memperingan kinerja router, mempercepat response time -> tinggal lempar
+enkripsi IPsec 	/etc/shadow 
+min -> batasan tidak (bisa) ganti password
+max -> batasan secara paksa kapan harus ganti password secara rutin (99999 tidak akan disuruh ganti)
+warn -> peringatan mendekati hari H untuk ganti password 
+reserved untuk disisipi informasi lain
+last change -> jumlah hari
+system accounts yang dibuat ketika pertama kali di install (UID: 1-499)
+adduser lebih interaktif
+useradd banyak parameter yang harus di passing secara runtut, satu waktu
+chpasswd "[user]:[pw]"
+/etc/passwd uid gid nama user group shell command
+/etc/shadow simpan hash password
+permission t -> sticky bit -> simpan tidak bisa hapus
+secara default satu user tergolong dalam (dibuatkan) satu group (beranggotakan
+user yang bersangkutan)
+wheel:x:10:cid,osadmin -> group
+user:x:[uid]:
+sudo groupadd [nama]
+group id sudah disiapkan (diurutkan, disediakan tempat masing-masing tiap user)
+oleh kernel maka tidak disarankan untuk menambah secara manual
+uid/gid dibawah 500 di reserved (dipakai untuk keperluan sistem)
+nama user/group tidak boleh uppercase dan symbol karena masalah compatibility
+aplikasi yang membaca/menggunakan -> nama maksimal 32 karakter
+groupmod -n ganti nama group
+groupmod -g ganti gid
+dampak mengubah group id secara manual -> kepemilikan file disimpan dalam group
+id (gid adalah identitas dari sebuah file) -> file tidak dapat diakses dan tidak
+ada yang punya
+find -nogroup -> cari file yang gid nya tidak ada di /etc/group
+penyebab orphaned file -> menghapus package, karena file itu sudah tidak ada
+yang punya -> file sisa tidak dapat dikenali karena ada yang hilang
+/etc/skel -> setiap pembuatan user juga dibuat direktori yang ada dalam list ato
+dalam folder skel (folder/file dibuat ketika berada pada skel)
+/etc/default/useradd -> pengaturan default dari pembuatan user baru
+group id dimulai dari 100, home directory, direktori shell skel, create mail spool
+supaya user bisa terima email (dibuatkan inbox -> /var/mail)
+mutt -> memecah isi mail yang tersimpan dalam plain text
+useradd -D -> membuat user dengan format sesuai /etc/default/useradd tidak mengetikkan
+parameter secara manual juga /etc/login.defs
+/etc/login.defs -> simpan jenis enkripsi password user bersangkutan, menyimpan 
+kapan akan ganti password (masa kadaluarsa password)
+wheel -> supplementary group (group dalam group karena secara default tiap user
+satu group masing-masing) letaknya paling kanan
+usermod sesuai urutan mana yang duluan dan perubahannya pada user yang bersangkutan
+dibandingkan edit manual file penyimpan user dan password
+orphaned files hanya root yang dapat akses
+userdel tanpa parameter -r artinya home directory masih ada sementara user sudah tiada
+ls -ld -> lihat list file pada direktori terluar
+stat /etc/resolv.conf
+inode file conf table
+access: (0644/-rw-r--r--) -> digit pertama jika 0 maka bukan sticky bit
+file biasa tidak diset manual uid gid 3 digit terakhir permission 
+chown ganti hak akses file
+whoami menampilkan detail uid gid termasuk dalam supplementary group ato bukan
+newgrp ganti permission file dalam satu group
+jika tidak ada root access primary hilang ato irreversible
+chgrp ganti kepemilikan file/group -R termasuk semua subdir
+jenis file
+b block file (storage,hardware) -> /dev
+p proses c karakter untuk komunikasi antar device s untuk komunikasi antar socket
+cd x -> untuk langsung akses ke direktori dengan akses x (harus tau isi file didalamnya
+kecuali ada akses r)
+permission dari suatu file/direktori dari umask -> /etc/profile
+setuid -> eksekusi proses dimana asalnya dari pengeksekusi namun kepemilikan yang
+punya proses/file tersebut
+chmod 4nnn [file/dir]-> pasang
+chmod 0nnn [file/dir]-> hapus
+execute sekaligus setuid rws tanpa execute rwS
+setgid -> broadcast -> sifatnya banyak yang harus tau
+chmod 2nnn [file/dir]-> pasang
+chmod 0nnn [file/dir]-> hapus
+anonymous ftp -> permission t -> proses 1x jalan 1x simpen data
+chmod 1nnn [file/dir]
+/usr/bin/wall -> tty -> bc ssh -> kirim pesan ke seluruh user yang online
+hard link -> ada backup (file fisik ada 2, source dan dest)
+symbolic link -> berupa shortcut
+symbolic link kelebihan hemat space kelemahan tidak bisa link direktori
+tidak menyimpan file aslinya
+beda inode mengimitasi file aslinya (kopi posisi)
+hard link isi sama persis (inode) dengan aslinya
+/usr/local tempat app yang di compile sendiri oleh user
+/usr bawaan dari Linux (package compile an Linux)
+/var/spool/cups -> menyimpan queue halaman-halaman yang hendak di print sampai selesai
+ln sourcefile destfile -s soft/symbolic link
