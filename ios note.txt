@@ -1,4 +1,5 @@
-iOS:
+iOS -> bhs pemrograman Swift (dulu objective-c):
 Mac, MacBook/Pro -> OS X, macOS
 iPhone, iPad, iPod (sudah tidak didukung) -> iOS
 Apple TV: tvOS
+Apple Watch: watchOS
