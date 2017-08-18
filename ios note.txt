@@ -12,3 +12,4 @@ command+W = tutup window aktif
 command+tab = pindah task beda app
 command+` = pindah task sama app -> pindah antara beberapa dokumen dalam app yang sama
 command+space = spotlight search
+setiap user hanya berhak simpan/buka data pada user home folder yang bersangkutan
