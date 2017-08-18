@@ -9,3 +9,5 @@ tombol merah kuning hijau -> hijau maximize/fullscreen (tergantung app)
 windows logo button = command button
 command+Q = close all
 command+W = tutup window aktif
+command+tab = pindah task beda app
+command+` = pindah task sama app -> pindah antara beberapa dokumen dalam app yang sama
