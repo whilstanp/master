@@ -7,3 +7,5 @@ tools (IDE/SDK): Xcode
 menu dijadikan satu di toolbar/menu bar paling atas (hanya program yang aktif)
 tombol merah kuning hijau -> hijau maximize/fullscreen (tergantung app)
 windows logo button = command button
+command+Q = close all
+command+W = tutup window aktif
