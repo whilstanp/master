@@ -1,0 +1,4 @@
+iOS:
+Mac, MacBook/Pro -> OS X, macOS
+iPhone, iPad, iPod (sudah tidak didukung) -> iOS
+Apple TV: tvOS
