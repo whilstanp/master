@@ -5,3 +5,4 @@ Apple TV: tvOS
 Apple Watch: watchOS
 tools (IDE/SDK): Xcode
 menu dijadikan satu di toolbar/menu bar paling atas (hanya program yang aktif)
+tombol merah kuning hijau -> hijau maximize/fullscreen (tergantung app)
