@@ -1,0 +1,104 @@
+Show sisa deck (Masukan void show)
+
+
+void show()
+	{
+		struct node *ptr1=top;
+		printf("isi tumpukan  : \n");
+		while(ptr1!=NULL)
+		{
+		cout<<ptr1->data<<" ->";
+		ptr1=ptr1->next;
+		}
+
+		printf("NULL \n");
+	}
+
+		
+tambahkan deck.show();
+
+TAMBAH PLAYER (4 player)
+system("CLS");
+			deck.addCard();
+			p1.add(0);
+			p2.add(0);
+			p3.add(0);
+			p4.add(0);
+			int kartup1;
+			int kartup2;
+			int kartup3;
+			int kartup4;
+			char pil = 'y';
+
+			printf("Player 1 Turns\n");
+			kartup1 = deck.pop();
+			p1.update(p1.converter(kartup1));
+			kartup1 = deck.pop();
+			p1.update(p1.converter(kartup1));
+			printf("Ambil kartu lagi ? \n");
+			fflush(stdin);
+			scanf("%c",&pil);
+			while(pil=='y' )
+			{
+
+
+				kartup1 = deck.pop();
+				p1.update(p1.converter(kartup1));
+				if(p1.getTotal() > 30)
+				{
+					int proceed;
+					cout<<"HANGUS !";
+					cout<<"tekan 1 untuk melanjutkan"<<endl;
+					cin>>proceed;
+					break;
+
+				}
+				printf("Ambil kartu lagi ? \n");
+				fflush(stdin);
+				scanf("%c",&pil);
+				if(pil == 'n')
+				{
+					break;
+				}
+}//baru di copy dari atas lagi ganti
+system("CLS");
+			printf("Player 2 Turns\n");
+			kartup2 = deck.pop();
+			p2.update(p2.converter(kartup2));
+			kartup2 = deck.pop();
+			p2.update(p2.converter(kartup2));
+			printf("Ambil kartu lagi ? \n");
+			fflush(stdin);
+			scanf("%c",&pil);
+			while( pil=='y' )
+			{
+
+
+				kartup2 = deck.pop();
+				p2.update(p2.converter(kartup2));
+				if(p2.getTotal() > 30)
+				{
+					int proceed;
+					cout<<"HANGUS !";
+					cout<<"tekan 1 untuk melanjutkan"<<endl;
+					cin>>proceed;
+					break;
+
+				}
+				if(p2.getTotal() == 30)
+				{
+					int proceed;
+					cout<<" SAMGONG!!!";
+					cout<<"tekan 1 untuk melanjutkan"<<endl;
+					cin>>proceed;
+				}
+				printf("Ambil kartu lagi ? \n");
+				fflush(stdin);
+				scanf("%c",&pil);
+				if(pil == 'n')
+				{
+					break;
+				}
+
+			}
+
