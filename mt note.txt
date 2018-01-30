@@ -1,0 +1,111 @@
+﻿rumus penghitungan tuning mulai dari mt4:
+fight tuning:
+600->620 2 x 1/2 bar filled -> ch 21-22 completed
+620->640 2 x 1/2 bar filled -> ch 23-24 completed
+640->660 3 x 1/3 bar filled-> ch 25-27 completed
+660->680 3 x 1/3 bar filled -> ch 28-30 completed
+680->700 3 x 1/3 bar filled -> ch 31-33 completed
+700->720 3 x 1/3 bar filled -> ch 34-36 completed
+700->740 4 x 1/4 bar filled -> ch 37-40 completed
+740->760 3 x 1/3 bar filled -> ch 41-43 completed
+760->780 3 x 1/3 bar filled -> ch 44-46 completed
+780->800 4 x 1/4 bar filled -> ch 47-50 completed
+hell tuning:
+800->815 4 x 1/4 bar filled -> ch 51-54 completed
+815->830 4 x 1/5 bar filled -> ch 55-59 completed
+final chapter -> being a conqueror & having fully tuned beloved car~❤
+
+setelan yang dianjurkan pada semua track s.d. 5dx+ (source youtube ta records)
+double credits tracks:
+- kanagawa metro highway 830HP/DG
+- ‎tokyo metro expressway 760HP/D
+old: (1, 2, 3, 3dx, 3dx+)
+- wangan 830HP/DG
+- ‎yokohane 830HP/DG
+- ‎osaka 760HP/D
+- ‎c1 700HP/B
+- ‎new belt 760HP/D
+- ‎nagoya 800HP/DG
+- ‎fukuoka 720HP/B
+- ‎hakone 760HP/D
+new: (4, 5, 5dx, 5dx+)
++ yaesu 700HP/B
++ ‎yokohama/minato mirai 800HP/DG
++ ‎taikan 720HP/B
++ ‎kobe/hanshin r3 harbor 640HP/HG
++ ‎hiroshima 640HP/HG
++ ‎ikebukuro/yamate tunnel 700HP/B
++ ‎shibuya/shinjuku 680HP/G
+
+setelan yang disarankan dari awal mobil dibuat atau dari discarded dengan tujuan mempermudah proses story (source allan lancaster youtube channel)
+chapter:
+21-22 600HP/B
+23-27 620HP/B
+28-33 640HP/B
+34-40 660HP/B
+41-46 680HP/B
+47-59 700HP/B -> all tuning steps are completed
+refer to completed set or keep it at balanced
+
+setelan untuk pengulangan story --> round 2 keatas untuk yang mahir/mau tantangan jika tidak ingin ambil resiko silahkan kunci setting pada 740HP/B (source SOARS youtube channel)
+chapter:
+1. 800HP/DG
+2. 830HP/DG
+3. 720HP/B
+4. 760HP/D
+5. 720HP/B
+6. 760HP/D
+7. 720HP/B
+8. 760HP/D
+9. 720HP/B
+10. 830HP/DG
+11. 760HP/D
+12. 830HP/DG
+13. 830HP/DG
+14. 760HP/D
+15. ‎760HP/D
+16. 760HP/D
+17. 830HP/DG
+18. 760HP/D
+19. 720HP/B
+20. 720HP/B
+21. 740HP/B
+22. 830HP/DG
+23. 720HP/B
+24. 760HP/D
+25. 760HP/D
+26. 720HP/B
+27. 760HP/D
+28. 760HP/D
+29. 760HP/D
+30. 720HP/B
+31. 830HP/DG
+32. 760HP/D
+33. 760HP/D
+34. 720HP/B
+35. 720HP/B
+36. 830HP/DG
+37. 760HP/D
+38. 720HP/B
+39. ‎740HP/B
+40. 800HP/DG
+41. 720HP/B
+42. 760HP/D
+43. 760HP/D
+44. ‎760HP/D
+45. 760HP/D
+46. 700HP/B
+47. 740HP/B
+48. 720HP/B
+49. 720HP/B
+50. 720HP/B
+51. 760HP/D
+52. 760HP/D
+53. 830HP/DG
+54. 760HP/D
+55. 720HP/B
+56. 760HP/D
+57. 760HP/D
+58. 760HP/D
+59. 720HP/B
+60. 760HP/D
