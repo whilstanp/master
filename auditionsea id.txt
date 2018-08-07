@@ -1,6 +1,0 @@
-asiasoft passport:
-id: shawnspencer22
-pw: a12bc34d
-auditionsea id:
-id: yskomugi
-pw: adrianevan
