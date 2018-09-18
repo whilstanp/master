@@ -54,5 +54,18 @@ public:
 		}
 	}
 };
+void display_stack(stack<Monster*> &stack, sf::RenderWindow &window)
+{
+	for(int i=0;i<stack.get_count();i++){
+		stack.get_array()[i]->GetSprite()->setPosition(stack.get_array()[i]->GetSprite()->getPosition().x,(300-(i*50)));
+		window.draw(*stack.get_array()[i]->GetSprite());
+	}
+}
+void animate_stack(stack<Monster*> &stack, sf::RenderWindow &window)
+{
+	for(int i=0;i<stack.get_count();i++){
+		stack.get_array()[i]->Animate();
+	}
+}
 
 
