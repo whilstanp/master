@@ -23,7 +23,7 @@ public:
 	}
 	T dequeue()
 	{
-		T *temp, ret;
+		T *temp = item, ret;
 		ret = item[0];
 		item = new T[count - 1];
 		for (int i = 0; i < count; i++)
