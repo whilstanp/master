@@ -20,7 +20,10 @@ public:
 		}
 		item[count] = _item;
 		count++;
-		delete[] temp;
+		if (count > 1)
+		{
+			delete[] temp;
+		}
 	}
 	T dequeue()
 	{
