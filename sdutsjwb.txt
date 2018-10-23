@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+//template vector<class T>{}
+int deret(int &total, int angka, int sign)
+{
+	cout<<sign*pow(angka,2.0);
+	total+=sign*pow(angka,2.0);
+	if(angka!=1)
+	{
+		cout<<" + ";
+		deret(total,(angka-1),(sign*(-1)));
+	}
+	else
+	{
+		cout<<" = ";
+	}
+	return total;
+}
+/*bool try_(int goal, int current, int number, vector<int> pool)
+{
+	if(current==goal)
+	{
+		for(int i=0;i<pool.size();i++)
+		{
+			cout<<pool[i]<<" + ";
+		}
+		return true;
+	}
+	if(current>goal)
+	{
+		return false;
+	}
+	while(try_(goal,current,number,pool))
+	{
+		current+=number;
+		number++;
+		pool.push_back(number);
+	}
+}*/
+void main()
+{
+	int n, total=0;
+	cout<<"n = ";
+	cin>>n;
+	total=pow(n,2.0);
+	cout<<total<<" + ";
+	cout<<deret(total,n-1,1);
+	cout<<"\n";
+}
