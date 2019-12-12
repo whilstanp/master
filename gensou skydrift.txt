@@ -1,1 +1,9 @@
 https://drive.google.com/uc?id=0B9tdbZSNoyP8NWNXR0U0YkJ4Zjg&export=download
+
+Controls
+The controls are very simple. By default you got a button for accelerating and keeping the speed. You can press another button to take tight turns (drifting/skitting/cornering). Logically you retain your momentum and speed while smoothly taking those sharp turns. There is a button for firing your spellcards or cycling through them.
+Z = Accelerate / speed
+X = Cornering/drifting or reverse
+C = Spell card shuffle / fire
+V = Partner switch
+Backspace = View rear camera. 
