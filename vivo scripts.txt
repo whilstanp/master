@@ -1,3 +1,5 @@
 adb devices
 adb shell
-pm uninstall -k --user 0 com.android.VideoPlayer
+pm uninstall -k --user 0 com.google.android.apps.docs
+pm uninstall --user 0 com.google.android.apps.docs
+pm disable com.google.android.apps.docs
