@@ -1,0 +1,6 @@
+adb pull /storage/emulated/0/Setup_Audition_2-66-00-th.exe C:\Users\user\Downloads\
+adb pull /storage/emulated/0/Setup_Audition_2-66-00-th-1a.bin C:\Users\user\Downloads\
+adb pull /storage/emulated/0/Setup_Audition_2-66-00-th-1b.bin C:\Users\user\Downloads\
+adb pull /storage/emulated/0/Setup_Audition_2-66-00-th-1c.bin C:\Users\user\Downloads\
+adb pull /storage/emulated/0/Setup_Audition_2-66-00-th-1d.bin C:\Users\user\Downloads\
+adb pull /storage/emulated/0/Setup_Audition_2-66-00-th-1e.bin C:\Users\user\Downloads\
