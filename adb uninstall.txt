@@ -1,3 +1,41 @@
 adb devices
 adb shell
-pm uninstall --user 0 | pm disable
+pm disable UNUSABLE/FAULTY COMMAND
+pm uninstall --user 0 com.android.browser;
+pm uninstall --user 0 com.android.calendar;
+pm uninstall --user 0 com.google.android.apps.docs;
+pm uninstall --user 0 com.google.android.apps.tachyon;
+pm uninstall --user 0 com.xiaomi.glgm;
+pm uninstall --user 0 com.xiaomi.mipicks;
+pm uninstall --user 0 com.google.android.videos;
+pm uninstall --user 0 com.google.android.music;
+pm uninstall --user 0 com.google.android.tts;
+pm uninstall --user 0 com.google.android.talk;
+pm uninstall --user 0 com.android.email;
+pm uninstall --user 0 com.google.android.maps;
+pm uninstall --user 0 com.android.cellbroadcastreceiver;
+pm uninstall --user 0 com.miui.videoplayer;
+pm uninstall --user 0 com.mi.globalTrendNews;
+pm uninstall --user 0 com.miui.notes;
+pm uninstall --user 0 com.google.android.photos;
+pm uninstall --user 0 com.miui.hybrid;
+pm uninstall --user 0 com.miui.miservice;
+pm uninstall --user 0 com.xiaomi.midrop;
+pm uninstall --user 0 com.xiaomi.discover;
+pm uninstall --user 0 com.google.android.marvin.talkback;
+pm uninstall --user 0 com.xiaomi.xmsf;
+pm uninstall --user 0 com.xiaomi.simactivate.service;
+pm uninstall --user 0 com.google.android.youtube;
+pm uninstall --user 0 com.miui.weather2;
+pm uninstall --user 0 com.miui.providers.weather;
+pm uninstall --user 0 com.facebook.system;
+pm uninstall --user 0 com.facebook.appmanager;
+pm uninstall --user 0 com.facebook.services;
+pm uninstall --user 0 com.miui.backup;
+pm uninstall --user 0 com.miui.cleanmaster;
+pm uninstall --user 0 com.miui.antispam;
+pm uninstall --user 0 com.miui.bugreport;
+pm uninstall --user 0 com.miui.securitycenter;
+pm uninstall --user 0 com.miui.securitycore;
+pm uninstall --user 0 com.android.updater;
+pm uninstall --user 0 com.miui.yellowpage;
