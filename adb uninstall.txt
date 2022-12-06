@@ -22,7 +22,7 @@ pm uninstall --user 0 com.xiaomi.midrop;
 pm uninstall --user 0 com.xiaomi.discover;
 pm uninstall --user 0 com.google.android.marvin.talkback;
 pm uninstall --user 0 com.xiaomi.xmsf;
-pm uninstall --user 0 com.xiaomi.simactivate.service;
+pm uninstall --user 0 com.miui.virtualsim;
 pm uninstall --user 0 com.google.android.youtube;
 pm uninstall --user 0 com.miui.weather2;
 pm uninstall --user 0 com.miui.providers.weather;
