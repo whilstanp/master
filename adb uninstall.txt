@@ -41,6 +41,5 @@ pm uninstall --user 0 com.google.android.googlequicksearchbox;
 pm uninstall --user 0 com.google.android.apps.maps;
 pm uninstall --user 0 com.google.android.apps.photos;
 pm uninstall --user 0 com.xiaomi.mirecycle;
-pm uninstall --user 0 com.duokan.phone.remotecontroller;
 pm uninstall --user 0 com.mi.android.globalpersonalassistant;
 pm uninstall --user 0 com.mi.android.globalFileexplorer;
