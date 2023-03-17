@@ -31,3 +31,4 @@ pm uninstall --user 0 com.xiaomi.xmsf;
 pm uninstall --user 0 com.xiaomi.simactivate.service;
 pm uninstall --user 0 com.miui.yellowpage;
 pm uninstall --user 0 com.google.android.youtube;
+pm uninstall --user 0 com.miui.bugreport;
